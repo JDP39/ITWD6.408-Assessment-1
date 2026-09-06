@@ -5,7 +5,7 @@ GitHub:
 https://github.com/JDP39/ITWD6.408-Assessment-1.git
 
 Vercel:
-
+https://itwd-6-408-assessment-1-rose.vercel.app/
 
 Supabase:
 https://supabase.com/dashboard/project/iakneqgnrsacfzrplmjf
