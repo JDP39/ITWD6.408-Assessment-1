@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------- Website configuration --------------------------------------------->
+<head>
+    <script type="module" src="javascripts/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-1</title>
+<!--------------------------------------------- Insert bootstrap --------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!--------------------------------------------- Insert Bootstrap icons --------------------------------------------->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+ <link rel="stylesheet" href="style.css">
+
+<!-- ------------------------------------------- Colour variables --------------------------------------------->
+    <style>
+        :root{
+        --navbar-color:#DAF7A6;
+        --showcase-color:#000000;
+        --bio-color:#FFC300;
+        --webtech-color:#EC7063;
+        --comptence-color:#9CDA0D;
+        --statement-color:#F27A09;
+        --flipcard-front-color:#60c5fb;
+    }
+    </style>
+</head>
+<!--------------------------------------------- Visible Webpage --------------------------------------------->
+<body>
+<!--------------------------------------------- Collapsible search bar --------------------------------------------->
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    
+<!--------------------------------------------- Nav items --------------------------------------------->
+  <div class="container-fluid" style="background-color: var(--navbar-color); height: 10vh;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><h3 class="d-inline"><span class="bi bi-globe"> ITWD6.408</span></h3></a>
+<!--------------------------------------------- small-screen search button --------------------------------------------->
+        <button class="btn d-inline d-lg-none ms-2 align-items-right" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Search">
+            <span class="bi bi-search fs-4"></span>
+        </button>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: var(--navbar-color);">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav" style=" z-index: 20; ">
+        <ul class="navbar-nav float-end fs-4 mt-2" style="background-color: var(--navbar-color);">
+            <li class="nav-item">
+                <a class="nav-link p-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="form.html">FORMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active bg-warning p-2" href="webAPI.html">WebAPI</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="javascript.html">JAVASCRIPT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="research.html">RESEARCH</a>
+            </li>                
+        </ul>
+    </div>
+        <button class="btn d-none d-lg-inline ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Search">
+            <span class="bi bi-search fs-2"></span>
+        </button>
+    </div>  
+  </nav>
+  </div>
+  <!--------------------------------------------- Main Body of the Page --------------------------------------------->
+<main>
+    <!--------------------------------------------- JSON RULES --------------------------------------------->
+    <div class="accordion d-flex flex-column flex-lg-row align-items-start" id="accordionExample">
+        <div class="row col-12 col-lg-2">
+            <h2 class="accordion-header col-6 col-lg-12">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    JSON RULES
+                </button>
+            </h2>
+<!--------------------------------------------- REST API --------------------------------------------->
+            <h2 class="accordion-header col-6 col-lg-12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">REST API</button>
+            </h2>
+        </div>
+<!--------------------------------------------- JSON tab--------------------------------------------->
+        <div class="row col-12 col-lg-9">
+            <div> 
+                <div class="accordion-item">
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="height: auto;">
+                            <h1><strong>JSON  Rules</strong></h1>
+                            <p>JSON (JavaScript Object Notation) rules dictate how you structure and format lightweight data</p>
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <div class="rule-card">
+                                        <h1><strong>Rule 1: Objects</strong></h1>
+                                        <p class="body-text">All object must be enclosed in curly braces { } and use a comma to separate key/value pairs</p>
+                                        <code>Code sample: { "key": "value", "key2": "value2"}</code>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="rule-card">
+                                        <h1><strong>Rule 2: Keys</strong></h1>
+                                        <p class="body-text">All keys must be strings and enclosed in double quotes</p>
+                                        <code>Code sample: { "fname": "Josh" }</code>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="rule-card">
+                                        <h1><strong>Rule 3: Values</strong></h1>
+                                        <p class="body-text">All values must be strings, numbers, booleans, null, arrays, or objects. Functions and undefined are not allowed.</p>
+                                        <code>Code sample: { "fname": "Josh", "age": 20, "isStudent": true }</code>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="rule-card">
+                                        <h1><strong>Rule 4: Arrays</strong></h1>
+                                        <p class="body-text">All arrays must be enclosed in square brackets [ ] and use a comma to separate elements</p>
+                                        <code>Code sample: [ "item1", "item2", "item3" ]</code>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="rule-card">
+                                        <h1><strong>Rule 5: Comments</strong></h1>
+                                        <p class="body-text">Comments are not allowed in JSON. Use a string value instead.</p>
+                                        <code>Code sample: { "fname": "Josh", "comment": "No comments allowed" }</code>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="rule-card">
+                                        <h1><strong>Rule 6: Trailing Commas</strong></h1>
+                                        <p class="body-text">Trailing commas are not allowed in JSON objects or arrays.</p>
+                                        <code>Code sample: { "fname": "Josh", "age": 20, "isStudent": true, }</code>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--------------------------------------------- REST API tab --------------------------------------------->
+                <div class="accordion-item">
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body" style="height: auto; align-items: center; justify-content: center;">
+                            <h3>Mobile Technology Form: Fetching data from Supabase</h3>
+                            <form class="d-flex flex-wrap gap-2 search-form" role="search">
+                                <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search"/>
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form><br>
+                            <div class="raw-data row g-3" style="background-color:var(--bs-nav-bg); padding: 5px;"> </div>
+                            <script>
+                            (() => {
+                            const supabaseApiUrl = 'https://iakneqgnrsacfzrplmjf.supabase.co/rest/v1/mobiletechnologyform';
+                            const supabaseKey = 'sb_publishable_vtnoOpx6sTS5ICMj30uGnw_jXzbcZOa';
+
+                            const container = document.currentScript.closest('.accordion-item');
+                            const outputElement = container.querySelector('.raw-data');
+                            const searchForm = container.querySelector('.search-form');
+                            const searchBar = container.querySelector('.search-bar');
+
+                            let allRecords = [];
+
+                            async function fetchDataRaw() {
+                                const url = new URL('mobiletechnologyform', supabaseApiUrl);
+                                url.searchParams.set('select', 'fname,lname,gender,addressl1,addressl2,towncity,phonetype,provider,phonestudy');
+                                url.searchParams.set('order', 'id.desc');
+
+                                let records = [];
+                                let from = 0;
+                                const pageSize = 1000; // Supabase max rows per request
+
+                                while (true) {
+                                    const response = await fetch(url, {
+                                        method: 'GET',
+                                        headers: {
+                                            apikey: supabaseKey,
+                                            Authorization: `Bearer ${supabaseKey}`,
+                                            Accept: 'application/json',
+                                            'Content-Type': 'application/json',
+                                            Range: `${from}-${from + pageSize - 1}`
+                                        }
+                                    });
+
+                                    if (!response.ok) {
+                                        const errorText = await response.text();
+                                        throw new Error(`HTTP ${response.status}: ${errorText}`);
+                                    }
+
+                                    const page = await response.json();
+                                    const pageData = Array.isArray(page) ? page : [];
+                                    records = records.concat(pageData);
+
+                                    if (pageData.length < pageSize) break; // last page reached
+                                    from += pageSize;
+                                }
+
+                                return records;
+                            }
+
+                            function renderRecords(records) {
+                                outputElement.innerHTML = '';
+
+                                if (!records.length) {
+                                    outputElement.innerHTML = '<p>No records found.</p>';
+                                    return;
+                                }
+
+                                records.forEach(record => {
+                                    const recordElement = document.createElement('div');
+                                    recordElement.className = 'border rounded col-12 col-md-6 col-lg-3';
+                                    recordElement.style.backgroundColor = '#f0f0f0';
+                                    recordElement.style.blockSize = 'auto';
+                                    recordElement.innerHTML = `
+                                        <p class="mb-1"><strong>Firstname:</strong> ${record.fname ?? 'N/A'}</p>
+                                        <p class="mb-1"><strong>Lastname:</strong> ${record.lname ?? 'N/A'}</p>
+                                        <p class="mb-1"><strong>Gender:</strong> ${record.gender ?? 'N/A'}</p>
+                                        <p class="mb-1"><strong>Address:</strong> ${[record.addressl1, record.addressl2].filter(Boolean).join(', ') || 'N/A'}</p>
+                                        <p class="mb-1"><strong>Town/City:</strong> ${record.towncity ?? 'N/A'}</p>
+                                        <p class="mb-1"><strong>Phone Type:</strong> ${record.phonetype ?? 'N/A'}</p>
+                                        <p class="mb-1"><strong>Provider:</strong> ${record.provider ?? 'N/A'}</p>
+                                        <p class="mb-1"><strong>Study Use:</strong> ${record.phonestudy ?? 'N/A'}</p>
+                                    `;
+                                    outputElement.appendChild(recordElement);
+                                });
+                            }
+
+                            function filterRecords(query) {
+                                const q = query.trim().toLowerCase();
+                                if (!q) return allRecords;
+
+                                const terms = q.split(/\s+/).filter(Boolean);
+
+                                return allRecords.filter(record => {
+                                    const searchableValues = [
+                                        record.fname,
+                                        record.lname,
+                                        record.gender,
+                                        record.addressl1,
+                                        record.addressl2,
+                                        record.towncity,
+                                        record.phonetype,
+                                        record.provider,
+                                        record.phonestudy
+                                    ]
+                                        .filter(v => v !== null && v !== undefined)
+                                        .map(v => v.toString().toLowerCase());
+
+                                    // every search word must match at least one field
+                                    return terms.every(term =>
+                                        searchableValues.some(value => value.includes(term))
+                                    );
+                                });
+                            }
+
+                            fetchDataRaw()
+                                .then(data => {
+                                    allRecords = data;
+                                    renderRecords(allRecords);
+                                })
+                                .catch(error => {
+                                    outputElement.innerHTML = `<p class="text-danger">Error fetching data: ${error.message}</p>`;
+                                });
+
+                            searchForm.addEventListener('submit', (e) => {
+                                e.preventDefault();
+                                renderRecords(filterRecords(searchBar.value));
+                            });
+
+                            let debounceTimer;
+                            searchBar.addEventListener('input', () => {
+                                clearTimeout(debounceTimer);
+                                debounceTimer = setTimeout(() => {
+                                    renderRecords(filterRecords(searchBar.value));
+                                }, 250);
+                            });
+                            })();
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</main>
+<!--------------------------------------------- Footer --------------------------------------------->
+<footer style="background-color: var(--navbar-color);">
+<!--------------------------------------------- Footer items --------------------------------------------->
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <span class="bi bi-linkedin text-primary"></span>
+                <span class="bi bi-youtube text-danger"></span>
+                <span class="bi bi-twitter text-info"></span>
+                <span class="bi bi-facebook text-primary-emphasis"></span>
+                <span class="bi bi-instagram"></span>
+            </div>
+            <div class="col-10 col-md-2">@Josh Dipper (EIT)</div>
+<!--------------------------------------------- Button trigger modal --------------------------------------------->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Privacy Policy
+            </button>
+<!--------------------------------------------- Privacy Policy Modal --------------------------------------------->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Privacy Policy</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+This Privacy Policy outlines how we collect, store, and use your personal information.<br>
+
+<h4>PERSONAL INFORMATION<br></h4>
+Personal information has the same meaning as defined in the Privacy Act 1993. This can include any information that can be used to personally identify you.<br>
+
+<h4>TYPES OF PERSONAL INFORMATION COLLECTED</h4><br>
+
+Types of personal information collected can include, but is not limited to:<br>
+
+        <ul>
+            <li>Name</li>
+            <li>Address</li>
+            <li>Location</li>
+            <li>Email address</li>
+            <li>Telephone number</li>
+            <li>Age or date of birth</li>
+            <li>Profession</li>
+        </ul>
+        
+
+<section class="privacy-policy">
+
+  <h2>Privacy Policy</h2>
+
+  <h3>How Information Is Collected</h3>
+  <p>
+    By filling out and submitting any forms on this webpage, you agree that we may collect the information you provide.
+  </p>
+
+  <h3>Use of Personal Information</h3>
+  <p>
+    Personal information collected from you will be used for research and study purposes to better understand trends in society.
+  </p>
+
+  <h3>Cookies</h3>
+  <p>
+    Our website uses cookies to enhance your browsing experience. You may disable cookies through your browser settings, though this may affect site functionality.
+  </p>
+
+  <h3>Use of Personal Information for Communication</h3>
+  <p>
+    By providing your email address, you agree to receive follow-up emails—promotional or informational. You may opt out at any time using the unsubscribe link included in our emails.
+  </p>
+
+  <h3>Disclosure of Personal Information</h3>
+  <p>
+    We do not sell, trade, or transfer your personal information to outside parties except when required by law or when necessary to provide services you have requested.
+  </p>
+
+  <h3>Protection of Personal Information</h3>
+  <p>
+    We take the protection of your personal information seriously and will ensure it is safeguarded from misuse, loss, or unauthorized access.
+  </p>
+
+  <h3>Your Rights</h3>
+  <p>
+    You have the right to access, correct, or delete your personal information. Requests can be made by contacting us through the details provided on our website.
+  </p>
+
+  <h3>Changes to This Policy</h3>
+  <p>
+    We reserve the right to update or modify this Privacy Policy at any time. Any changes will be posted on this page along with an updated effective date.
+  </p>
+
+  <h3>Contact Information</h3>
+  <p>
+    If you have any questions or concerns regarding this Privacy Policy, please contact us at:
+    <strong>dippej1@student.eit.ac.nz</strong>
+  </p>
+
+  <p><em>Last modified: Friday, 31 July 2026, 4:00 PM</em></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </footer>
+<!--------------------------------------------- Insert Bootstrap --------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

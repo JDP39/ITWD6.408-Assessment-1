@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------- Website configuration --------------------------------------------->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab-1</title>
+<!--------------------------------------------- Insert bootstrap --------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ <!--------------------------------------------- Insert Bootstrap icons --------------------------------------------->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+ <link rel="stylesheet" href="style.css">
+ <link rel="formpage" href="form.html">
+
+<!--------------------------------------------- Colour variables --------------------------------------------->
+    <style>
+        :root{
+        --navbar-color:#DAF7A6;
+        --showcase-color:#000000;
+        --bio-color:#FFC300;
+        --webtech-color:#EC7063;
+        --comptence-color:#9CDA0D;
+        --statement-color:#F27A09;
+        --flipcard-front-color:#60c5fb;
+    }
+    </style>
+</head>
+<!--------------------------------------------- Visible Webpage --------------------------------------------->
+<body>
+<!--------------------------------------------- Collapsible search bar --------------------------------------------->
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+<!--------------------------------------------- Nav items --------------------------------------------->
+  <div class="container-fluid" style="background-color: var(--navbar-color); height: 10vh;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><h3 class="d-inline"><span class="bi bi-globe"> ITWD6.408</span></h3></a>
+<!--------------------------------------------- Search button --------------------------------------------->
+        <button class="btn d-inline d-lg-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Search">
+            <span class="bi bi-search fs-4"></span>
+        </button>
+<!--------------------------------------------- icon for navigation panel on small device--------------------------------------------->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: var(--navbar-color); align-items: end;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav" style=" z-index: 20; ">
+        <ul class="navbar-nav float-end fs-4 mt-2" style="background-color: var(--navbar-color);">
+            <li class="nav-item">
+                <a class="nav-link active bg-warning  p-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="form.html">FORMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="webAPI.html">WebAPI</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="javascript.html">JAVASCRIPT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="research.html">RESEARCH</a>
+            </li>                
+        </ul>
+    </div>
+<!--------------------------------------------- large-screen search button --------------------------------------------->
+        <button class="btn d-none d-lg-inline ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Search">
+            <span class="bi bi-search fs-2"></span>
+        </button>
+    </div>
+</nav>  
+    </div>
+
+    <main>
+<!--------------------------------------------- Create a Bootstrap grid: 4 rows --------------------------------------------->
+        <div class="container-fluid">
+<!--------------------------------------------- Heading section --------------------------------------------->
+            <div class="row" id="imgHeading" style="background-image: url('images/HomePage/javascript-code.jpg'); background-size: cover; background-position: center; min-height: 300px;">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div class="overlay-box text-center text-white" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 10px; padding: 1.5rem; width: 100%; max-width: 800px;">
+                        <h1>Advanced Internet and Web Learning Portfolio</h1>
+                        <p>My name is Josh Dipper</p>
+                        <p>And I'm a Web Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="background-color: var(--bio-color);">
+<!--------------------------------------------- My BIO --------------------------------------------->
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12">
+                            <h1>My BIO</h1>
+                        </div>
+                        <div class="col-sm-12 col-md-3 d-flex align-items-center justify-content-center"> 
+                            <img class="img-fluid d-block bio-photo" src="images/HomePage/Me.jpg" alt="portrait">
+                        </div>
+                        <div class="col-sm-12 col-md-9">
+                            <p>I am a 20-year-old web developer from the New Zealand. I have a passion for creating visually appealing and user-friendly websites. I have experience in HTML, CSS, JavaScript, and various web development frameworks. In my free time, I enjoy playing pinball, gaming, and learning new technologies and improving my coding skills. I am taking this course because I enjoyed the level 5 website development course. From this course, I hope to gain a deeper understanding of web development and enhance my skills to create even more impressive websites.
+                            </p>
+                        </div>						
+                    </div>
+                </div>	
+<!--------------------------------------------- Web technologies --------------------------------------------->
+                <div class="col-sm-12 col-md-6 col-lg-6" style="background-image: linear-gradient(hsl(0, 100%, 90%), var(--webtech-color));">
+                    <h1>MY WEB TECHNOLOGIES</h1>
+                    <h2>My top 5 web technologies</h2>
+                    <ol>
+                        <li>Code Editor: Visual Studio Code</li>
+                        <li>Hosting: Github</li>					  
+                        <li>Browser: Firefox</li>
+                        <li>Frameworks: Bootstrap, ReactJS, JQuery</li>
+                        <li>Coding language: HTML, CSS, JavaScript</li>
+                    </ol> 
+                </div>
+            </div>
+            <div class="row" style="background-color: var(--navbar-color);">
+<!--------------------------------------------- Web Development Competences --------------------------------------------->
+                <div class="col-12" style="align-items: flex-end;">
+                    <h1>MY WEB DEVELOPMENT COMPETENCES</h1>
+                </div>
+<!--------------------------------------------- Flip boxes --------------------------------------------->
+                <div class="col-sm-12 col-md-4" style="height: 300px;">
+                    <div class="flip-box" style="height:280px;">
+                        <div class="flip-box-inner">
+<!--------------------------------------------- HTML flip box --------------------------------------------->
+                            <div class="flip-box-front" style="background-color: var(--flipcard-front-color);">
+                                <h3><strong>HTML</strong></h3>
+                                <img src="images/HomePage/html5.png" alt="HTML" class="img-fluid d-block" style="align-items: center; margin: auto;">
+                            </div>
+                            <div class="flip-box-back">
+                                <h2 style="margin-top: 20px;"><strong>My HTML Skill level</strong></h2>
+                                <span class="bi bi-star-fill color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star-fill color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star-fill color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>	
+                <div class="col-sm-12 col-md-4">
+                    <div class="flip-box" style="height:280px;">
+                        <div class="flip-box-inner">
+<!--------------------------------------------- CSS flip box --------------------------------------------->
+                            <div class="flip-box-front" style="background-color: var(--flipcard-front-color);">
+                                <h3><strong>CSS</strong></h3>
+                                <img src="images/HomePage/css3.png" alt="CSS" class="img-fluid d-block" style="align-items: center; margin: auto;">
+                            </div>
+                            <div class="flip-box-back">
+                                <h2 style="margin-top: 20px;"><strong>My CSS Skill level</strong></h2>
+                                <span class="bi bi-star-fill color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star-fill color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star-fill color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                            </div>
+                        </div>
+                    </div>			
+                </div>
+
+                <div class="col-sm-12 col-md-4">
+                    <div class="flip-box" style="height:280px;">
+                        <div class="flip-box-inner">
+<!--------------------------------------------- JavaScript flip box --------------------------------------------->
+                            <div class="flip-box-front" style="background-color: var(--flipcard-front-color);">
+                                <h3><strong>JavaScript</strong></h3>
+                                <img src="images/HomePage/javascript.png" alt="JavaScript" class="img-fluid d-block" style="align-items: center; margin: auto;">
+                            </div>
+                            <div class="flip-box-back">
+                                <h2 style="margin-top: 20px;"><strong>My JavaScript Skill level</strong></h2>
+                                <span class="bi bi-star-fill color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                                <span class="bi bi-star color-gold" style="font-size: 2rem;"></span>
+                            </div>
+                        </div>
+                    </div>				
+                </div>	
+            </div>
+<!--------------------------------------------- Statement of Authenticity --------------------------------------------->
+            <div class="row " style="background-color: var(--statement-color);">
+                <!--Have only 1 column-->
+                <div class="col-12"> 
+                    <h1>STATEMENT OF AUTHENTICITY</h1>
+                    <p>“I confirm that:<br>This is an original assessment and is entirely my own work.<br>It contains no material previously published or written by another person or myself except where due acknowledgement is made in the text.<br>No material which to a substantial extent, has been submitted for any other academic course, is included without acknowledgement.”<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: var(--navbar-color);">
+<!--------------------------------------------- Footer items --------------------------------------------->
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <span class="bi bi-linkedin text-primary"></span>
+                <span class="bi bi-youtube text-danger"></span>
+                <span class="bi bi-twitter text-info"></span>
+                <span class="bi bi-facebook text-primary-emphasis"></span>
+                <span class="bi bi-instagram"></span>
+            </div>
+            <div class="col-10 col-md-2">@Josh Dipper (EIT)</div>
+<!--------------------------------------------- Button trigger modal --------------------------------------------->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Privacy Policy
+            </button>
+
+<!--------------------------------------------- Privacy Policy Modal --------------------------------------------->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Privacy Policy</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+This Privacy Policy outlines how we collect, store, and use your personal information.<br>
+
+<h4>PERSONAL INFORMATION<br></h4>
+Personal information has the same meaning as defined in the Privacy Act 1993. This can include any information that can be used to personally identify you.<br>
+
+<h4>TYPES OF PERSONAL INFORMATION COLLECTED</h4><br>
+
+Types of personal information collected can include, but is not limited to:<br>
+
+        <ul>
+            <li>Name</li>
+            <li>Address</li>
+            <li>Location</li>
+            <li>Email address</li>
+            <li>Telephone number</li>
+            <li>Age or date of birth</li>
+            <li>Profession</li>
+        </ul>
+        
+
+<section class="privacy-policy">
+
+  <h2>Privacy Policy</h2>
+
+  <h3>How Information Is Collected</h3>
+  <p>
+    By filling out and submitting any forms on this webpage, you agree that we may collect the information you provide.
+  </p>
+
+  <h3>Use of Personal Information</h3>
+  <p>
+    Personal information collected from you will be used for research and study purposes to better understand trends in society.
+  </p>
+
+  <h3>Cookies</h3>
+  <p>
+    Our website uses cookies to enhance your browsing experience. You may disable cookies through your browser settings, though this may affect site functionality.
+  </p>
+
+  <h3>Use of Personal Information for Communication</h3>
+  <p>
+    By providing your email address, you agree to receive follow-up emails—promotional or informational. You may opt out at any time using the unsubscribe link included in our emails.
+  </p>
+
+  <h3>Disclosure of Personal Information</h3>
+  <p>
+    We do not sell, trade, or transfer your personal information to outside parties except when required by law or when necessary to provide services you have requested.
+  </p>
+
+  <h3>Protection of Personal Information</h3>
+  <p>
+    We take the protection of your personal information seriously and will ensure it is safeguarded from misuse, loss, or unauthorized access.
+  </p>
+
+  <h3>Your Rights</h3>
+  <p>
+    You have the right to access, correct, or delete your personal information. Requests can be made by contacting us through the details provided on our website.
+  </p>
+
+  <h3>Changes to This Policy</h3>
+  <p>
+    We reserve the right to update or modify this Privacy Policy at any time. Any changes will be posted on this page along with an updated effective date.
+  </p>
+
+  <h3>Contact Information</h3>
+  <p>
+    If you have any questions or concerns regarding this Privacy Policy, please contact us at:
+    <strong>dippej1@student.eit.ac.nz</strong>
+  </p>
+
+  <p><em>Last modified: Friday, 31 July 2026, 4:00 PM</em></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </footer>
+
+<!--------------------------------------------- Insert Bootstrap --------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>

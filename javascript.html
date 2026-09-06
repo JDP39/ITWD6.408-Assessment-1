@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--------------------------------------------- Website configuration --------------------------------------------->
+<head>
+    <script type="module" src="javascripts/script.js"></script>
+    <script type="module" src="javascripts/review.js"></script>
+    <script type="module" src="javascripts/quiz.js"></script>
+    <script type="module" src="javascripts/searchDB.js"></script>
+    <script type="module" src="javascripts/slideshows.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development Lab work</title>
+<!--------------------------------------------- Insert bootstrap --------------------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<!--------------------------------------------- Insert Bootstrap icons --------------------------------------------->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+ <link rel="stylesheet" href="style.css">
+
+<!-- ------------------------------------------- Colour variables --------------------------------------------->
+    <style>
+        :root{
+        --navbar-color:#DAF7A6;
+        --showcase-color:#000000;
+        --bio-color:#FFC300;
+        --webtech-color:#EC7063;
+        --comptence-color:#9CDA0D;
+        --statement-color:#F27A09;
+        --flipcard-front-color:#60c5fb;
+    }
+    </style>
+</head>
+<!--------------------------------------------- Visible Webpage --------------------------------------------->
+<body>
+<!--------------------------------------------- Collapsible search bar --------------------------------------------->
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    
+<!--------------------------------------------- Nav items --------------------------------------------->
+  <div class="container-fluid" style="background-color: var(--navbar-color); height: 10vh;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><h3 class="d-inline"><span class="bi bi-globe"> ITWD6.408</span></h3></a>
+<!--------------------------------------------- small-screen search button --------------------------------------------->
+        <button class="btn d-inline d-lg-none ms-2 align-items-right" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Search">
+            <span class="bi bi-search fs-4"></span>
+        </button>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color: var(--navbar-color);">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse d-lg-flex justify-content-center" id="navbarNav" style=" z-index: 20; ">
+        <ul class="navbar-nav float-end fs-4 mt-2" style="background-color: var(--navbar-color);">
+            <li class="nav-item">
+                <a class="nav-link p-2" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="form.html">FORMS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="webAPI.html">WebAPI</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active bg-warning p-2" href="javascript.html">JAVASCRIPT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link p-2" href="research.html">RESEARCH</a>
+            </li>                
+        </ul>
+    </div>
+        <button class="btn d-none d-lg-inline ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" aria-label="Search">
+            <span class="bi bi-search fs-2"></span>
+        </button>
+    </div>  
+  </nav>
+  </div>
+  <!--------------------------------------------- Main Body of the Page --------------------------------------------->
+<main>
+    <!--------------------------------------------- Demo 1 --------------------------------------------->
+    <div class="accordion d-flex flex-column flex-lg-row align-items-start" id="accordionExample">
+        <div class="row col-12 col-lg-2">
+            <h2 class="accordion-header col-6 col-lg-12">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">QUIZ</button>
+            </h2>
+<!--------------------------------------------- Demo 2 --------------------------------------------->
+            <h2 class="accordion-header col-6 col-lg-12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Slideshow</button>
+            </h2>
+<!--------------------------------------------- Demo 3 --------------------------------------------->
+            <h2 class="accordion-header col-6 col-lg-12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Search and filter</button>
+            </h2>
+<!--------------------------------------------- Demo 4 --------------------------------------------->
+            <h2 class="accordion-header col-6 col-lg-12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Add a review</button>
+            </h2>
+        </div>
+<!--------------------------------------------- Quiz tab --------------------------------------------->
+        <div class="row col-12 col-lg-10">
+            <div class="accordion-item">
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body" style="height: auto; position: center;">
+                        <h1 align="center"><strong>Formula 1 Quiz</strong></h1>
+                        <div class="card">
+                            <div class="card-body" align="center">
+                                <div id="quiz-box">
+                                    <h2 id="question"></h2>
+                                    <div id="options"></div>
+                                </div>
+                                <div id="result" class="text-center" style="display:none;">
+                                    <h2>Your score: <span id="score"></span></h2>
+                                    <button id="restart-btn" class="btn btn-primary">Try Again</button>
+                                </div>
+                                <div class="text-end mt-3">
+                                    <button id="next-btn" class="btn btn-primary" disabled>Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<!--------------------------------------------- Slideshow tab --------------------------------------------->
+            <div class="accordion-item" id="SlideShow">
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body" style="height: auto;">
+                        <h1 align="center"><strong>Formula 1 Slideshow</strong></h1>
+                        <div id="raw-data"class="row" style="background-color:var(--bs-nav-bg); padding: 10px;"></div>
+                    </div>
+                    <!-- Theme Toggle-->
+                        <button id="dark-mode-toggle" class="darkMD" type="button">Toggle Dark Mode</button>
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            
+                            <img src="images/Slideshow/redbull.jpg" alt="Red Bull Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/ferrari.jpg" alt="Ferrari Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/mclaren.jpg" alt="McLaren Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/lotus.jpg" alt="Lotus Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/mercedes.jpg" alt="Mercedes Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/sauber.jpg" alt="Sauber Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/forceindia.jpg" alt="Force India Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                         <img src="images/Slideshow/williams.jpg" alt="Williams Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/tororosso.jpg" alt="Toro Rosso Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/caterham.jpg" alt="Caterham Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/marussia.jpg" alt="Marussia Formula 1 car">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Slideshow/hrt.jpg" alt="HRT Formula 1 car">
+                        </div>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                    <span class="dot" onclick="currentSlide(11)"></span>
+                    <span class="dot" onclick="currentSlide(12)"></span>
+                    </div>
+                </div>
+            </div>
+<!--------------------------------------------- Search & Filter tab --------------------------------------------->
+            <div class="accordion-item">
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body" style="height: auto; align-items: center; justify-content: center;">
+                        <div class="accordion-body" style="height: auto; align-items: center; justify-content: center;">
+                            <h1 align="center"><strong>Search and Filter</strong></h1>
+                            <form class="d-flex search-form" role="search">
+                                <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search"/>
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form><br><div class="filter-dropdowns">
+                                <select class="form-select filter-team" style="max-width:150px;">
+                                    <option value="">All Teams</option>
+                                </select>
+                                <select class="form-select filter-year" style="max-width:150px;">
+                                    <option value="">All Years</option>
+                                </select>
+                                <select class="form-select filter-engine" style="max-width:200px;">
+                                    <option value="">All Engine Layouts</option>
+                                </select>
+                                <select class="form-select sort-by" style="max-width:150px;">
+                                    <option value="">Sort by</option>
+                                    <option value="year-asc">Active Year (oldest first)</option>
+                                    <option value="year-desc">Active Year (newest first)</option>
+                                    <option value="team-asc">Team (A-Z)</option>
+                                    <option value="team-desc">Team (Z-A)</option>
+                                    <option value="name-asc">Name (A-Z)</option>
+                                    <option value="name-desc">Name (Z-A)</option>
+                                </select>
+                                <div class="form-check ms-2">
+                        <input class="form-check-input filter-favorites" style="margin-top: 10px;" type="checkbox" id="favOnlyThree">
+                        <label class="form-check-label" style="margin-top: 9px;" for="favOnlyThree"><strong>List of favorites</strong></label>
+                    </div>
+
+                            </div>
+
+                            <div class="raw-data row g-4" style="background-color:var(--bs-nav-bg); padding: 5px;"> </div>
+                            <div class="raw-data row g-4" style="background-color:var(--bs-nav-bg); padding: 5px;"></div>
+                            <nav class="mt-3">
+                                <ul class="pagination justify-content-center"></ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--------------------------------------------- Add review tab --------------------------------------------->
+            <div class="accordion-item">
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body" style="height: auto; align-items: center; justify-content: center;">
+                        <h1 align="center"><strong>Add a review</strong></h1>
+                    <div class="container my-5">
+                        <!-- Product Section -->
+                        <div class="card shadow-sm mb-5">
+                        <div class="row g-0">
+                            <!-- Product image column -->
+                            <div class="col-md-5">
+                            <img id="productImage" class="w-100 rounded-3" alt="Product Image">
+                            </div>
+                            <!-- Product information column -->
+                            <div class="col-md-7">
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2" id="productCategory"></span>
+                                <button id="RexyFav">Add to favorites</button>
+                                <h2 id="productName"></h2>
+                                <p id="productDescription"></p>
+                                <h3><strong>Power train</strong></h3>
+                                <p id="engine">  </p>
+                                <p id="horsePower">  </p>
+                                <p id="gearBox">  </p>
+                                <p id="zero">  </p>
+                                <p id="topSpeed">  </p>                                
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Reviews -->
+                        <div class="mb-4">
+                            <h3>Customer Reviews</h3>
+                            <div id="reviewsContainer"></div>
+                        </div>
+
+                        <!-- Add Review -->
+                        <div class="card shadow-sm">
+                        <div class="card-header">
+                            <h4 class="mb-0">Add Review</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="reviewForm">
+                            <div class="mb-3">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" id="reviewUser" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Rating</label>
+                                <select id="reviewRating" class="form-select" required>
+                                    <option value="">Select Rating</option>
+                                    <option value="5">★★★★★ (5)</option>
+                                    <option value="4">★★★★☆ (4)</option>
+                                    <option value="3">★★★☆☆ (3)</option>
+                                    <option value="2">★★☆☆☆ (2)</option>
+                                    <option value="1">★☆☆☆☆ (1)</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Comment</label>
+                                <textarea id="reviewComment" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Review</button>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+</main>
+<!--------------------------------------------- Footer --------------------------------------------->
+<footer style="background-color: var(--navbar-color);">
+<!--------------------------------------------- Footer items --------------------------------------------->
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <span class="bi bi-linkedin text-primary"></span>
+                <span class="bi bi-youtube text-danger"></span>
+                <span class="bi bi-twitter text-info"></span>
+                <span class="bi bi-facebook text-primary-emphasis"></span>
+                <span class="bi bi-instagram"></span>
+            </div>
+            <div class="col-10 col-md-2">@Josh Dipper (EIT)</div>
+<!--------------------------------------------- Button trigger modal --------------------------------------------->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Privacy Policy
+            </button>
+<!--------------------------------------------- Privacy Policy Modal --------------------------------------------->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Privacy Policy</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+This Privacy Policy outlines how we collect, store, and use your personal information.<br>
+
+<h4>PERSONAL INFORMATION<br></h4>
+Personal information has the same meaning as defined in the Privacy Act 1993. This can include any information that can be used to personally identify you.<br>
+
+<h4>TYPES OF PERSONAL INFORMATION COLLECTED</h4><br>
+
+Types of personal information collected can include, but is not limited to:<br>
+
+        <ul>
+            <li>Name</li>
+            <li>Address</li>
+            <li>Location</li>
+            <li>Email address</li>
+            <li>Telephone number</li>
+            <li>Age or date of birth</li>
+            <li>Profession</li>
+        </ul>
+        
+
+<section class="privacy-policy">
+
+  <h2>Privacy Policy</h2>
+
+  <h3>How Information Is Collected</h3>
+  <p>
+    By filling out and submitting any forms on this webpage, you agree that we may collect the information you provide.
+  </p>
+
+  <h3>Use of Personal Information</h3>
+  <p>
+    Personal information collected from you will be used for research and study purposes to better understand trends in society.
+  </p>
+
+  <h3>Cookies</h3>
+  <p>
+    Our website uses cookies to enhance your browsing experience. You may disable cookies through your browser settings, though this may affect site functionality.
+  </p>
+
+  <h3>Use of Personal Information for Communication</h3>
+  <p>
+    By providing your email address, you agree to receive follow-up emails—promotional or informational. You may opt out at any time using the unsubscribe link included in our emails.
+  </p>
+
+  <h3>Disclosure of Personal Information</h3>
+  <p>
+    We do not sell, trade, or transfer your personal information to outside parties except when required by law or when necessary to provide services you have requested.
+  </p>
+
+  <h3>Protection of Personal Information</h3>
+  <p>
+    We take the protection of your personal information seriously and will ensure it is safeguarded from misuse, loss, or unauthorized access.
+  </p>
+
+  <h3>Your Rights</h3>
+  <p>
+    You have the right to access, correct, or delete your personal information. Requests can be made by contacting us through the details provided on our website.
+  </p>
+
+  <h3>Changes to This Policy</h3>
+  <p>
+    We reserve the right to update or modify this Privacy Policy at any time. Any changes will be posted on this page along with an updated effective date.
+  </p>
+
+  <h3>Contact Information</h3>
+  <p>
+    If you have any questions or concerns regarding this Privacy Policy, please contact us at:
+    <strong>dippej1@student.eit.ac.nz</strong>
+  </p>
+
+  <p><em>Last modified: Friday, 31 July 2026, 4:00 PM</em></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </footer>
+<!--------------------------------------------- Insert Bootstrap --------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
